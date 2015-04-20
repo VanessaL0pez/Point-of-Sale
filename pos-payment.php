@@ -41,7 +41,7 @@
    $merchantReference = "TEST-PAYMENT-" . date("Y-m-d-H:i:s");
    $paymentAmount     = "2"; 	
    $currencyCode      = "USD"; 	
-   $callbackurl       = "https://demos.adyen.com/mtest/pos-landing.php"; //"https://merchantdomain.com/payments/processpaymentresult.php";
+   $callbackurl       = "https://merchantdomain.com/payments/processpaymentresult.php";
 
    $os = getOS();
 	 
