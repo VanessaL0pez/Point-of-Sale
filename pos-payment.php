@@ -37,10 +37,10 @@
 
    session_start();
 
-   $merchantAccount   = "PME_POS";
+   $merchantAccount   = "YourMerchantAccount";
    $merchantReference = "TEST-PAYMENT-" . date("Y-m-d-H:i:s");
-   $paymentAmount     = "2"; 	
-   $currencyCode      = "USD"; 	
+   $paymentAmount     = "100"; 	
+   $currencyCode      = "EUR"; 	
    $callbackurl       = "https://merchantdomain.com/payments/pos-landing.php";
 
    $os = getOS();
