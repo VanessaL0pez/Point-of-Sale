@@ -53,13 +53,11 @@
    $terminalLauncher .= "&merchantReference=".urlencode($merchantReference);
    $terminalLauncher .= "&amount=".$paymentAmount;
    $terminalLauncher .= "&currency=".$currencyCode;
-   $receiptOrderLines = base64_encode("BH|Adyen Omni Shop||CB\n");
-   $terminalLauncher .= "&receiptOrderLines=".urlencode($receiptOrderLines);	
 
    if ($os == "android")$terminalLauncher .= "&fullScreen="."true";
 
    $sessid = session_id();		
-   $terminalLauncher .= "&callback=".urlencode($callbackurl."/?sessid=".$sessid."&merchantAccount=".$merchantAccount);
+   $terminalLauncher .= "&callback=".urlencode($callbackurl."/?sessid=".$sessid."&merchantAccount=".$merchantAccount."&merchantReference=".$merchantReference);
 
    $_SESSION["merchantAccount"]   = $merchantAccount;
    $_SESSION["merchantReference"] = $merchantReference;
