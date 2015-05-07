@@ -17,7 +17,7 @@
 	- Android: 	Playstore: search for Adyen.
    2) Board the Adyen App: Enter merchant account, user name and password on the start of the Adyen App
    3) Board the Payment device: In the Adyen App > Payment device > Add new device
-   For details on this steps please consult the POS manual.
+   For details on these steps please consult the POS manual.
 
    =============================================================================================================================
    ========================================= Parameters  =======================================================================
