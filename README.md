@@ -9,26 +9,27 @@ your system with the results from the performed transactions.
 
 ## Code structure
 ```
-1.URL-initiated  launch of the Adyen App
+Web to App
+	1.PHP: pos-payment
+	
+	URL-initiated  launch of the Adyen App:
+  	- pos-payment.php	:Simple link with the required parameters to the Adyen App
+  	- pos-landing.php	:Landing page which handles the result from the performed transaction
 
-  - pos-payment.php			: Simple link with the required parameters to the Adyen App
-  - pos-landing.php			: Landing page which handles the result from the performed transaction
+	2.PHP: pos-payment-advanced
+	URL-initiated launch of the Adyen App with an extended set of parameters
+	- pos-payment-advanced.php:Advanced link that provides set of parameters to the Adyen App
+  	- pos-landing-advanced.php:Landing page which handles the result from the performed transaction and the information recieved in the parameters
 
-2.URL-initiated launch of the Adyen App with an extended set of parameters
+Andoid Intent integration 
 
-  - pos-payment-advanced.php		: Advanced link that provides set of parameters to the Adyen App
-  - pos-landing-advanced.php		: Landing page which handles the result from the performed transaction 
-					  and the information recieved in the parameters
+  	1. pos-payment		:Simple App to App integration, implementing the required set of parameters
+  	2. pos-payment-advanced	:App to App integration providing extensive set of parameters
 
-3. Andoid Intent integration 
+iOS integration
 
-  - pos-payment				: Simple App to App integration, implementing the required set of parameters
-  - pos-payment-advanced		: App to App integration providing extensive set of parameters
-
-4. iOS integration
-
-  - pos-payment				: Simple App to App integration, implementing the required set of parameters
-  - pos-payment-advanced		: App to App integration providing extensive set of parameters
+  	1. pos-payment		:Simple App to App integration, implementing the required set of parameters
+  	2. pos-payment-advanced	:App to App integration providing extensive set of parameters
 
 ```
 ## Manuals
