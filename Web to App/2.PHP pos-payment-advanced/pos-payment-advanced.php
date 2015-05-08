@@ -59,7 +59,7 @@
 
 	session_start();
 
-  	$merchantAccount   = "PME_POS";
+  	$merchantAccount   = "YourMerchantAccount";
 	$merchantReference = "TEST-PAYMENT-" . date("Y-m-d-H:i:s");
   	$paymentAmount 	   = "10100"; 	
   	$currencyCode 	   = "EUR"; 	
@@ -74,7 +74,7 @@
 	$receiptHandler    = false;
 	$askGratuity 	   = false; 
 	$manualKeyedEntry  = false;
-  	$callbackurl 	   = "https://demos.adyen.com/mtest/pos-landing.php"; //"https://merchantdomain.com/payments/processpaymentresult.php"; 
+  	$callbackurl 	   = "https://merchantdomain.com/payments/processpaymentresult.php"; 
   
   	$os = getOS();
 	 
@@ -95,7 +95,6 @@
 	$tenderOptions 	   		 	 = "GetAdditionalData";		
 	if ($askGratuity) 	$tenderOptions	.= ",AskGratuity"; 	
 	if ($receiptHandler) 	$tenderOptions	.= ",ReceiptHandler"; 
-	if ($bypassPin)		$tenderOptions  .= ",BypassPin";		
 	if ($manualKeyedEntry)	$tenderOptions  .= ",ManualKeyedEntry";
 	$terminalLauncher 		      	.= "&tenderOptions=".urlencode($tenderOptions);		
 		
@@ -187,8 +186,8 @@ function getReceiptOrderLines($orderData,$currencyCode,$paymentAmount){
         //add elements before the receipt footer elements (after payment details)
 	$myReceiptOrderLines .= "".
 			"BF|Store Contact Info||C\n".
-			"BF|Web:|mydummycoffeestore.com/contact|\n".
-			"BF|Mail:|mydummy@coffeestore.com|\n".
+			"BF|Web:|myfavoritecoffeestore.com/contact|\n".
+			"BF|Mail:|email@coffeestore.com|\n".
 			"BF|Phone:|+1 234 555 6789|\n".
 			"BF|||\n".
 			"BF|Follow us on facebook: AdyenPayments||C\n".
@@ -226,7 +225,6 @@ function getFormattedNetAmount($salesTaxPercentage,$amount){
 function getSalesTaxAmount($salesTaxPercentage,$amount){
 	return ($salesTaxPercentage * $amount)/100;
 }
-
 
 
 /* =============================================================================================================================
