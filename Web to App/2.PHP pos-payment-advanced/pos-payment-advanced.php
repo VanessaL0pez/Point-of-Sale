@@ -144,9 +144,7 @@ function getBrowser(){
 function getReceiptOrderLines($orderData,$currencyCode,$paymentAmount){
 
 	$myReceiptOrderLines = "";
-	
 	$formattedAmountValue = formatAmount($paymentAmount);
-	
 	
 	//Before Header (BH)
         //add elements before the receipt header elements
@@ -198,10 +196,6 @@ function getReceiptOrderLines($orderData,$currencyCode,$paymentAmount){
 
         //After Footer (AF):
         //add some elements after the receipt footer
-	$myReceiptOrderLines .= "BF|---||C\n".
-			"BF|Adyen adds PspReference directly below footer:||C\n".
-			"BF|---||C\n";	
-
 	$myReceiptOrderLines .= "AF|||\n".
 			"AF|We'd love to see you again!||CB\n".
 			"AF|||\n";
