@@ -1,5 +1,5 @@
 <?php
-/**
+/*
    Create Payment with URL-initiated launch for the Adyen App & Terminal
    
    The URL-initiated launch for the Adyen App & Terminal provide a flexible, secure and easy way to allow merchants to set up  
