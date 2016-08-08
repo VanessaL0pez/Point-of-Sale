@@ -21,16 +21,10 @@ Web to App
 	- pos-payment-advanced.php:Advanced link that provides set of parameters to the Adyen App
   	- pos-landing-advanced.php:Landing page which handles the result from the performed transaction and the information recieved in the parameters
 
-Andoid Intent integration 
+Andoid Intent 
 
   	1. pos-payment		:Simple App to App integration, implementing the required set of parameters
   	2. pos-payment-advanced	:App to App integration providing extensive set of parameters
-
-iOS integration
-
-  	1. pos-payment		:Simple App to App integration, implementing the required set of parameters
-  	2. pos-payment-advanced	:App to App integration providing extensive set of parameters
-
 ```
 ## Manuals
 The code examples are based on our POS Quick Integration manual and the POS manual which provides rich information on how our platform works. 
